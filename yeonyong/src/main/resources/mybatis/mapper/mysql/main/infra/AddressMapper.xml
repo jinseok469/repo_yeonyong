@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mickey.demo.fapp.address.AddressDao">
+
+	<resultMap type="com.mickey.demo.fapp.address.AddressDto"
+		id="resultMapObj"></resultMap>
+
+	<select id="selectList" resultMap="resultMapObj">
+		select
+		a.seq,
+		a.user_seq,
+		a.postalCode,
+		a.betterAddress,
+		a.addressKind,
+		a.leaderNumber
+		from
+		address a
+		where 1=1 and
+		a.leaderNumber = 1
+		order by seq asc
+
+	</select>
+</mapper>

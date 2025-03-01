@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<th>번호</th>
+			<th>유저 번호</th>
+			<th>전화 번호</th>
+			<th>번호 타입</th>
+			<th>leaderNumber</th>
+		</tr>
+		<tr th:each="list:${list}">
+			<td th:text="${list.seq}"></td>
+			<td th:text="${list.user_seq}"></td>
+			<td th:text="${list.callNumber}"></td>
+			<td th:text="${list.callCategory}"></td>
+			<td th:text="${list.leaderNumber}"></td>
+		</tr>
+	</table>
+</body>

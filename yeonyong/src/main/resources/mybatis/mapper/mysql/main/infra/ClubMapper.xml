@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mickey.demo.fapp.club.ClubDao">
+
+	<resultMap type="com.mickey.demo.fapp.club.ClubDto"
+		id="resultMapObj"></resultMap>
+
+	<select id="selectList" resultMap="resultMapObj">
+		select
+			a.seq,
+			a.club
+		from
+			club a
+
+		where 1=1
+		order by seq asc
+	</select>
+</mapper>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<table style="text-align:center">
+		<tr>
+			<th>번호</th>
+			<th>사용자 번호</th>
+			<th>우편 번호</th>
+			<th>상세 주소</th>
+			<th>주소 타입</th>
+
+		</tr>
+		<tr th:each="list:${list}">
+			<td th:text="${list.seq}"></td>
+			<td th:text="${list.user_seq}"></td>
+			<td th:text="${list.postalCode}"></td>
+			<td th:text="${list.betterAddress}"></td>
+			<td th:text="${list.addressKind}"></td>
+		</tr>
+	</table>
+
+
+
+
+
+
+
+</body>

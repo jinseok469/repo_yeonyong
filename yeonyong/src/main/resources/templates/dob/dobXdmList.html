@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<table>
+<tr>
+<td>회원번호</td>
+<td>생년월일</td>
+<td>기념일 종류</td>
+</tr>
+<tr th:each="list:${list}">
+<td th:text="${list.user_seq}"></td>
+<td th:text="${list.day}"></td>
+<td th:text="${list.anniversaryCategory}"></td>
+</tr> 
+
+</table>
+</body>
